@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#121115">
+  <title>CubiEngine Studio · Cubiverse</title>
+  <link rel="icon" href="./favicon.svg">
+  <script type="module" crossorigin src="./assets/studio-ChdGBMIY.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/preload-helper-DMGCcr4D.js">
+  <link rel="modulepreload" crossorigin href="./assets/three-CXivr22E.js">
+  <link rel="modulepreload" crossorigin href="./assets/surface-board-D4rCD4OH.js">
+  <link rel="modulepreload" crossorigin href="./assets/cubitool-assets-B4v9deTh.js">
+  <link rel="modulepreload" crossorigin href="./assets/survival-view-BpddFyit.js">
+  <link rel="modulepreload" crossorigin href="./assets/native-t4pEsJ-c.js">
+  <link rel="modulepreload" crossorigin href="./assets/tictactoe-7YFINF5d.js">
+  <link rel="modulepreload" crossorigin href="./assets/mine-neighborhood-DkFKDYSC.js">
+  <link rel="modulepreload" crossorigin href="./assets/2048-B7c4WAa9.js">
+  <link rel="modulepreload" crossorigin href="./assets/creation-session-Cp4mm-gg.js">
+  <link rel="stylesheet" crossorigin href="./assets/survival-view-9CR9iSgx.css">
+  <link rel="stylesheet" crossorigin href="./assets/native-DcVHXhj5.css">
+  <link rel="stylesheet" crossorigin href="./assets/creation-session-DYORofvW.css">
+  <link rel="stylesheet" crossorigin href="./assets/studio-C80_hnzt.css">
+</head>
+<body>
+  <header class="studio-header" id="studio-header">
+    <div class="platform-wrap platform-nav">
+      <a class="studio-brand" href="#page/home" data-route="home"><img src="./brand/cubiverse-wordmark-light.svg" width="175" alt="Cubiverse"></a>
+      <a href="#page/workbench" data-route="workbench" class="platform-action nav-workbench"><img src="./studio-design/cube.svg" width="16" height="16" alt="">Workbench</a>
+      <nav aria-label="Platform"><a href="#page/home" data-route="home" aria-current="page">Home</a><a href="#page/cubigames" data-route="cubigames">CubiGames</a><a href="#page/explore" data-route="explore">Explore Games</a><a href="#page/community" data-route="community">Community</a></nav>
+      <a href="#page/studio" data-route="studio" class="studio-primary platform-action nav-studio-callout">Open CubiEngine Studio <img src="./studio-design/send.svg" width="16" height="16" alt=""></a>
+    </div>
+  </header>
+  <main id="platform-home" class="platform-page studio-home" data-page="home" aria-labelledby="platform-title" hidden>
+    <section id="home" class="platform-hero platform-wrap" aria-labelledby="platform-title">
+      <div class="platform-hero-content"><h1 id="platform-title" class="platform-display" aria-label="A new side of play."><img src="./studio-design/headline-0.svg" width="486" height="83" alt=""><img class="headline-play" src="./studio-design/headline-play.svg" width="359" height="83" alt=""></h1><p>Play familiar games in 3D. Build a version of your own with CubiEngine Studio.</p><div class="platform-hero-actions"><a href="#page/cubigames" data-route="cubigames" class="platform-action studio-play">Play CubiGames <img src="./studio-design/arrow.svg" alt="" width="17" height="17"></a><a href="#page/studio" data-route="studio" class="platform-action">Create in Studio</a></div></div>
+      <picture class="platform-sculpture"><source media="(max-width:760px)" srcset="./studio-design/sculpture-mobile.svg"><img src="./studio-design/sculpture.svg" width="648" height="400" alt=""></picture>
+    </section>
+    <section id="home-composer-slot" class="platform-wrap home-composer-slot" aria-labelledby="composer-title"></section>
+    <section id="platform-recent" class="platform-wrap platform-recent" aria-labelledby="platform-recent-title" hidden><div class="collection-head"><h2 id="platform-recent-title">Play again</h2></div><div id="platform-recent-games" class="platform-recent-games"></div></section>
+    <section class="platform-collection platform-wrap" aria-labelledby="featured-title"><div class="collection-head featured-head"><div><span class="platform-kicker">Featured CubiGames</span><h2 id="featured-title">Pick a world.</h2></div><a class="platform-action studio-play" href="#page/cubigames" data-route="cubigames">View all games <span aria-hidden="true">↗</span></a></div><div id="featured-games" class="platform-games"></div></section>
+    <section id="play-twist" class="platform-wrap platform-twist twist-section" aria-labelledby="twist-title">
+      <div class="collection-head featured-head"><div><h2 id="twist-title">Play Twist</h2><p class="page-intro">Play the original 3D Tic-Tac-Toe or try six variations on its rules.</p></div><svg class="twist-symbol" viewBox="0 0 56 56" aria-hidden="true"><path d="M9 20C15 5 40 5 46 23M37 17l10 7 3-12M47 36C41 51 16 51 10 33M19 39 9 32 6 44" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div id="twist-entry"></div>
+      <div id="platform-twist-modes"></div>
+    </section>
+    <section id="how-to-play" class="platform-wrap platform-how" aria-labelledby="how-title"></section>
+    <section class="platform-wrap platform-guestbook" aria-labelledby="guestbook-title">
+      <div class="collection-head featured-head"><div><h2 id="guestbook-title">Leave your mark.</h2><p class="page-intro">Guestbook</p></div></div>
+      <div id="guestbook"></div>
+    </section>
+  </main>
+
+  <main id="studio-home" class="platform-page studio-section" data-page="studio" aria-labelledby="composer-title"><div id="studio-composer-slot"><div class="studio-composer" id="shared-composer">
+      <div class="composer-product"><span class="composer-mark"><img src="./studio-design/studio.svg" width="13" height="13" alt=""></span>CubiEngine Studio</div>
+      <h2 id="composer-title">Start with an idea</h2>
+      <form id="home-form" class="composer-card">
+        <svg class="composer-progress" aria-hidden="true"><rect x="1.5" y="1.5" rx="12" pathLength="100" id="build-outline"/></svg>
+        <label class="sr-only" for="home-prompt">Describe your game</label>
+        <textarea id="home-prompt" rows="2" maxlength="2000" placeholder="Describe the game you want to convert, a rule you want to change, or an idea of your own..."></textarea>
+        <div class="composer-actions">
+          <div class="composer-options"><label class="composer-source"><img src="./studio-design/gamepad.svg" alt="" width="16" height="16"><span class="sr-only">Source game</span><select id="composer-source"><option value="">Auto-detect source</option></select></label><button type="button" data-dialog="sources">Browse games</button><a class="composer-link" href="#page/explore" data-route="explore">Explore Games</a><button type="button" data-dialog="import"><img src="./studio-design/attachment.svg" alt="" width="16" height="16"><span class="wide-label">Import file or link</span><span class="compact-label">File or link</span></button><button type="button" data-dialog="template"><img src="./studio-design/cube.svg" alt="" width="16" height="16">3D template</button></div>
+          <button class="studio-primary generate" id="generate-game" type="submit">Start creating <img src="./studio-design/send.svg" alt="" width="18" height="18"></button>
+        </div>
+        <div class="composer-visual"><button id="attach-reference-image" type="button">Attach image</button><input id="reference-image-input" type="file" accept="image/png,image/jpeg,image/webp" hidden><div id="reference-image-chip" hidden><img id="reference-image-thumbnail" alt="Attached reference"><div><strong id="reference-image-name"></strong><small>Sent to the model when you generate.</small></div><button id="remove-reference-image" type="button" aria-label="Remove reference image">×</button></div><button id="attach-player-model" type="button">Attach player GLB</button><input id="player-model-input" type="file" accept=".glb,model/gltf-binary" hidden><div class="source-chip" id="player-model-chip" hidden><span id="player-model-name"></span><button id="remove-player-model" type="button" aria-label="Remove player model">×</button></div></div>
+        <div class="source-chip" id="source-chip" hidden><span id="source-name"></span><button id="clear-source" type="button" aria-label="Remove source">×</button></div>
+      </form>
+      <section class="composer-card build-card" id="build-card" hidden aria-labelledby="build-title">
+        <div class="build-row"><div role="status"><strong id="build-title">Building your game</strong><p id="build-step"></p><p id="build-next"></p></div><div class="build-actions"><div class="build-timing"><span class="build-estimate">Estimated</span> <span id="build-percent" role="progressbar" aria-label="Estimated generation progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">0%</span><span id="build-elapsed"></span></div><button id="cancel-build" type="button">Cancel</button></div></div>
+      </section>
+      <p id="home-feedback" class="studio-feedback" role="status"></p>
+      <section id="generation-outcome" class="generation-outcome" hidden aria-labelledby="outcome-title">
+        <header class="outcome-header"><div><p class="outcome-status" id="outcome-status" role="status"></p><h2 id="outcome-title" tabindex="-1"></h2><p id="outcome-detail"></p></div><div class="outcome-actions"><a id="original-reference" hidden target="_blank" rel="noopener noreferrer">View original ↗</a><button id="attach-original-project" class="studio-primary" type="button" hidden>Attach original project</button><button id="retry-generation" type="button" hidden>Retry generation</button><button id="edit-generated" class="studio-primary" type="button" hidden>Edit in Workbench ↗</button></div></header>
+        <section id="generated-play" hidden aria-label="Play generated game" tabindex="0"><div id="generated-viewport" class="generated-viewport"></div><div id="generated-controls" class="generated-controls" hidden><p id="generated-game-status" role="status"></p><div id="generated-moves" aria-label="Move controls"></div><button type="button" id="generated-reset">Restart</button></div></section>
+        <details id="source-build-files" hidden><summary>Build files and gameplay evidence</summary><ul id="source-build-file-list"></ul><button type="button" id="download-source-build">Download project and offline demo</button><p id="source-build-export-status" role="status"></p></details>
+        <details id="generation-diagnostics"><summary>Generation details</summary><div id="generation-diagnostic-text"></div></details>
+      </section>
+      <section class="composer-card source-review" id="source-review" hidden aria-labelledby="source-review-title">
+        <div class="source-review-heading"><div><p class="work-kicker" id="source-review-stage">Original project review</p><h3 id="source-review-title"></h3></div><button type="button" id="clear-source-review">Close review</button></div>
+        <p id="source-review-summary"></p>
+        <div class="source-review-links" id="source-review-links"></div>
+        <ul class="source-review-list" id="source-review-checks"></ul>
+        <details><summary>Source inventory and references</summary><ul class="source-review-list" id="source-review-files"></ul></details>
+        <form id="source-plan-form">
+          <label for="source-plan-goal">What should change in 3D?</label>
+          <textarea id="source-plan-goal" rows="2" maxlength="2000" required placeholder="Describe the spatial change and the behavior to preserve."></textarea>
+          <p>Confirming sends selected source excerpts to the configured AI provider for planning.</p>
+          <button type="submit" class="studio-primary" id="request-source-plan" value="build">Confirm source and build demo</button>
+          <button type="submit" class="studio-secondary" id="request-source-options" value="plan">Review plans first</button>
+        </form>
+        <div id="source-plan-options"></div>
+        <p class="studio-feedback" id="source-build-capability"></p>
+        <button type="button" class="studio-primary" id="build-source-plan" hidden>Build playable version</button>
+        <button type="button" id="cancel-source-step" hidden>Cancel</button>
+        <p class="studio-feedback" id="source-review-feedback" role="status"></p>
+        <button type="button" id="export-source-review">Export review JSON</button>
+      </section>
+      <div class="asset-lab-actions"><button type="button" id="asset-lab-open" aria-expanded="false" aria-controls="asset-lab">Create a 3D asset</button><button type="button" id="open-tripo-settings" aria-haspopup="dialog" aria-controls="tripo-settings">Tripo API key</button><a class="composer-link" href="./studio-demo.html">Play the handcrafted 3D demo ↗</a></div>
+      <section class="composer-card source-review" id="asset-lab" hidden aria-labelledby="asset-lab-title">
+        <h3 id="asset-lab-title">Create a 3D asset</h3>
+        <form id="asset-plan-form">
+          <label>Reference image<input id="asset-image" type="file" accept="image/png,image/jpeg,image/webp"></label>
+          <label id="asset-source-row" hidden>Image from the reviewed original<select id="asset-source"></select></label>
+          <img id="asset-reference" alt="Asset reference" hidden>
+          <label>What should this asset look like in 3D?<textarea id="asset-brief" maxlength="2000" rows="2" required placeholder="Describe the shape, style, and materials to preserve…"></textarea></label>
+          <button type="submit" id="asset-plan-submit">Prepare asset plan</button>
+        </form>
+        <p class="studio-feedback" id="asset-status" role="status"></p>
+        <progress id="asset-progress" aria-label="Provider generation progress" max="100" hidden></progress>
+        <section id="asset-draft" aria-labelledby="asset-title" hidden>
+          <h4 id="asset-title"></h4>
+          <dl><dt>Reference evidence</dt><dd id="asset-evidence"></dd><dt>Materials and style</dt><dd id="asset-materials"></dd><dt>Generation instructions</dt><dd id="asset-generation-prompt"></dd></dl>
+          <p id="asset-citations"></p>
+          <p id="asset-checks"></p>
+          <div id="asset-preview" hidden></div>
+          <div class="asset-lab-actions">
+            <button type="button" class="studio-primary" id="asset-start" hidden>Confirm and generate with ComfyUI</button>
+            <button type="button" id="asset-glb" hidden>Download GLB</button>
+            <button type="button" id="asset-use-player" hidden>Playtest as the player model</button>
+            <button type="button" id="asset-script" hidden>Download Three.js scene</button>
+            <button type="button" id="asset-versions-back" hidden>Open previous version</button>
+          </div>
+        </section>
+        <form id="asset-revise-form" hidden>
+          <label>Revise this asset<textarea id="asset-revision" rows="2" maxlength="2000" placeholder="Describe what to change in the next version…" required></textarea></label>
+          <button type="submit">Prepare revision</button>
+        </form>
+      </section>
+      <div class="composer-samples" id="composer-samples" role="group" aria-label="Suggested prompts"></div>
+    <div class="studio-draft-entry" aria-label="Projects">
+      <button type="button" data-dialog="projects">My Projects</button>
+      <button type="button" id="creation-starter">Open playable starter</button>
+      <button type="button" id="open-sample">Classic sample</button>
+      <button type="button" id="open-draft" hidden>Resume your draft</button>
+    </div></div></div>
+    <section class="platform-wrap studio-shelf" aria-labelledby="studio-gallery-title"><div class="collection-head"><div><h2 id="studio-gallery-title">Made in Studio</h2><p class="page-intro">Play a project or make a version of your own.</p></div><a class="platform-action" href="#page/community" data-route="community">Community ↗</a></div><div class="library-grid" id="studio-projects"></div></section>
+    <section class="platform-wrap studio-shelf" aria-labelledby="studio-sources-title"><div class="collection-head"><div><h2 id="studio-sources-title">Start from a game</h2><p class="page-intro">Play open-source originals or build a rule variant of a supported game.</p></div><a class="platform-action" href="#page/explore" data-route="explore">Explore Games ↗</a></div><div class="library-grid" id="studio-sources"></div></section>
+    <section class="platform-wrap spatial-guide" aria-labelledby="spatial-guide-title"><div class="spatial-guide-head"><span class="platform-kicker">How spatial conversion works</span><h2 id="spatial-guide-title">Make space part of the rules.</h2></div><picture><img src="./studio-design/spatial-lift.png" width="2172" height="724" loading="lazy" alt="A flat maze opens into an exploded assembly, then becomes a playable spatial route with glowing ramps and a lime ball."></picture><ol><li><strong>Find the rule that matters</strong><p>Keep the core challenge that makes the original game worth playing.</p></li><li><strong>Give space a job</strong><p>Use depth, direction, surfaces or elevation to change the player’s decisions.</p></li><li><strong>Test the new decisions</strong><p>Open the build, check how it plays and adjust it in Workbench.</p></li></ol></section>
+    <section class="platform-wrap studio-desktop" aria-labelledby="desktop-title"><img src="./studio-design/cubeengine-windows.png" width="1000" height="630" loading="lazy" alt="CubeEngine desktop spatial puzzle preview"><div><span class="platform-kicker">Windows x64 · Prototype v0.1.0</span><h2 id="desktop-title">CubeEngine for Windows</h2><p class="page-intro">A standalone desktop tool for experimenting with spatial game conversion and previewing builds locally.</p><a class="platform-action studio-play" href="/downloads/cubeengine-windows.zip" download>Download for Windows ↓</a></div></section>
+    </main>
+
+    <main id="cubi-games" class="platform-page platform-collection platform-wrap" data-page="cubigames" aria-labelledby="collection-title" hidden>
+      <div class="collection-head"><div><h1 id="collection-title">CubiGames</h1><p class="page-intro">Play the original Cubiverse 3D games.</p></div><output id="platform-count" aria-label="Number of games">10</output></div>
+      <section id="cubi-player" class="library-player" aria-labelledby="cubi-player-title" hidden><div class="library-player-heading"><div><h2 id="cubi-player-title" tabindex="-1"></h2><p>Original Cubiverse spatial edition</p></div><a class="platform-action" href="/cubigames" id="cubi-close-game">Back to games</a></div><div class="library-game-host" id="cubi-game-host"></div><div class="library-player-actions"><button id="cubi-fullscreen" type="button">Fullscreen</button><button id="cubi-reload" type="button">Reload game</button><button id="cubi-remix" type="button">Remix in Studio</button></div></section>
+      <div class="platform-filterbar"><div id="platform-filters" class="platform-filters" role="group" aria-label="Filter games"><button type="button" data-game-filter="all" aria-pressed="true">All</button><button type="button" data-game-filter="arcade" aria-pressed="false">Arcade</button><button type="button" data-game-filter="puzzle" aria-pressed="false">Puzzles</button><button type="button" data-game-filter="strategy" aria-pressed="false">Strategy</button><button type="button" data-game-filter="favorites" aria-pressed="false">Saved</button></div><label class="platform-search"><img src="./studio-design/search.svg" alt="" width="20" height="20"><input id="platform-search" type="search" placeholder="Find a game" aria-label="Find a game" autocomplete="off"></label></div>
+      <div id="platform-games" class="platform-games"></div><p id="platform-games-empty" class="studio-feedback" hidden>No games match this selection.</p>
+    </main>
+
+    <main id="explore-games" class="platform-page platform-collection platform-wrap" data-page="explore" aria-labelledby="explore-title" hidden>
+      <div class="collection-head"><div><h1 id="explore-title">Explore Games</h1><p class="page-intro">Play original games and browse their source projects.</p></div></div>
+      <section id="library-player" class="library-player" aria-labelledby="library-player-title" hidden>
+        <div class="library-player-heading"><div><h2 id="library-player-title" tabindex="-1"></h2><p id="library-player-credit"></p></div><button id="library-close-game" type="button">Back to games</button></div>
+        <div id="library-game-host" class="library-game-host"></div>
+        <div class="library-player-actions"><button id="library-fullscreen" type="button">Fullscreen</button><button id="library-reload" type="button">Reload game</button><button id="library-use-game" type="button">Use in Studio</button><a id="library-provider" target="_blank" rel="noopener noreferrer">Source code ↗</a></div>
+      </section>
+      <div class="library-filters"><label>Search<input id="library-search" type="search" placeholder="Find a game" autocomplete="off"></label><label>Source<select id="library-platform"><option value="all">All sources</option><option value="Creator editions">Creator editions</option><option value="Portable Puzzles">Portable Puzzles</option><option value="Godot Demos">Godot Demos</option></select></label><label class="library-playable-filter"><input id="library-playable" type="checkbox" checked>Playable here</label></div>
+      <p id="library-count" class="studio-feedback" aria-live="polite"></p><div id="library-grid" class="library-grid source-grid"></div>
+    </main>
+
+    <main id="community" class="platform-page" data-page="community" aria-labelledby="community-title" hidden>
+      <section class="platform-community"><div class="platform-wrap community-inner"><div><h1 id="community-title">Community</h1><div class="platform-display"><img src="./studio-design/headline-1.svg" width="500" height="100" alt="Remix a world."></div><p>Play a project or make a version of your own.</p></div><img class="community-glyph" src="./studio-design/community.svg" width="215" height="215" alt=""></div></section>
+      <section class="platform-wrap community-project-list" aria-label="Community games"><div id="community-projects" class="library-grid"></div><p id="community-feedback" class="studio-feedback" role="status"></p></section>
+    </main>
+
+  <section id="creation-brief" aria-label="Game brief" hidden></section>
+  <section id="creation-workbench" aria-label="CubiEngine Workbench" hidden></section>
+  <section id="creation-empty" class="cb-empty" aria-label="Open a project" hidden><div class="cb-empty-card"><h1>Workbench</h1><p role="status">Open a project or start a new game.</p><button id="creation-new" type="button" class="studio-primary">Create a game</button><button id="empty-starter" type="button">Open playable starter</button><button id="empty-projects" type="button">My Projects</button><button id="empty-classic" type="button">Classic workbench</button></div></section>
+  <main id="studio-workbench" class="workbench" data-page="workbench" aria-labelledby="work-title" hidden>
+    <header class="work-head">
+      <span class="workbench-label">Workbench</span>
+      <div class="work-title"><h1 id="work-title"></h1><p id="work-status" role="status"></p></div>
+      <div class="work-head-actions" id="edit-actions"><button type="button" id="advanced-mode" aria-pressed="false">Advanced mode</button><button type="button" id="save-work-project">Save project</button><button type="button" class="studio-play" id="playtest">▷ <span>Playtest</span></button><button type="button" class="studio-primary" id="publish">→ Publish</button></div>
+      <div class="work-head-actions" id="play-actions" hidden><button type="button" id="pause">Pause</button><button type="button" id="restart">Reset</button><button type="button" id="stop">Stop and edit</button><button type="button" id="play-camera" aria-pressed="false">Current view</button></div>
+    </header>
+    <nav class="work-deck" id="work-deck" aria-label="Command Deck"><span>Command Deck</span><button type="button" data-deck="home" aria-pressed="true">Home</button><div id="advanced-deck" class="advanced-deck" hidden><button type="button" data-deck="model">Model</button><button type="button" data-deck="avatar">Avatar</button><button type="button" data-deck="ui">UI</button><button type="button" data-deck="script">Script</button><button type="button" data-deck="plugins">Plugins</button></div><button type="button" id="undo" disabled>Undo</button><div class="work-project-controls"><button id="workbench-projects" type="button">Open project</button><button id="workbench-import" type="button">Import project</button></div></nav>
+    <div class="work-tools" id="work-tools" aria-label="Scene tools">
+      <div data-tools="home"><button type="button" data-edit="insert">＋ Insert tile</button><button type="button" id="material-tool">◈ Material</button><button type="button" id="group-tool">▤ Scene groups</button><button type="button" id="anchor-tool">♧ Physics</button><button type="button" data-edit="terrain">⊞ Terrain</button></div>
+      <div data-tools="model" hidden><button type="button" data-edit="insert">Insert tile</button><button type="button" data-edit="terrain">Terrain color</button></div>
+      <div data-tools="avatar" hidden><button type="button" id="select-player">Select player</button><button type="button" data-edit="avatar">Player appearance</button></div>
+      <div data-tools="ui" hidden><button type="button" data-edit="game-ui">Title and objective</button><button type="button" data-edit="rules">Edit rules</button></div>
+      <div data-tools="script" hidden><button type="button" id="show-script">Project JSON</button><button type="button" data-edit="rules">Visual rules</button><button type="button" id="check-project">Check project</button><button type="button" id="download-project">Export JSON</button></div>
+      <div data-tools="plugins" hidden><button type="button" id="show-plugins">Connections</button></div>
+    </div>
+    <div class="binary-module-bar" id="binary-module-bar" hidden>
+      <nav id="binary-module-nav" class="binary-module-nav" aria-label="Project modules"></nav>
+      <button type="button" id="export-binary-draft">Export draft</button>
+    </div>
+    <div class="work-layout">
+      <aside class="work-scene" id="scene-panel" aria-label="Scene Tree"><section id="scene-objects"><h2>Scene Tree</h2><input id="scene-search" type="search" aria-label="Find a scene object" placeholder="Find a scene object"><div id="entity-tree" class="scene-list"></div></section><section id="scene-assets"><h2>Cubibox</h2><div class="asset-tabs" role="group" aria-label="Asset sources"><button type="button" data-assets="store" aria-pressed="true">Store</button><button type="button" data-assets="project" aria-pressed="false">My assets</button><button type="button" data-assets="ai" aria-pressed="false">AI 3D</button></div><input id="asset-search" type="search" aria-label="Find a material" placeholder="Find a material"><div id="scene-palette" class="scene-palette"></div><p id="palette-help" class="palette-help"></p></section></aside>
+      <section class="work-view" aria-label="Game viewport">
+        <div class="transform-bar" aria-label="Object tools"><div class="transform-modes" role="group" aria-label="Transform mode"><button type="button" data-transform="select" aria-keyshortcuts="Q" aria-pressed="true">Select <kbd>Q</kbd></button><button type="button" data-transform="move" aria-keyshortcuts="W" aria-pressed="false">Move <kbd>W</kbd></button><button type="button" data-transform="rotate" aria-keyshortcuts="E" aria-pressed="false">Rotate <kbd>E</kbd></button><button type="button" data-transform="scale" aria-keyshortcuts="R" aria-pressed="false">Scale <kbd>R</kbd></button></div><button id="transform-values" type="button">Values…</button><button id="cubitool-import" type="button" title="Attach a GLB to the selected piece">Cubitool · Import GLB</button><input id="cubitool-file" type="file" accept=".glb,model/gltf-binary" hidden><p id="transform-feedback" role="status"></p></div>
+        <div class="viewport-stage" id="viewport-stage"><div id="agent-world" class="agent-world"></div>
+          <div class="view-tools" id="scene-view-tools"><span id="view-label">Scene</span><div><button id="camera" type="button" title="Reset to perspective">Perspective</button><button id="toggle-grid" type="button" aria-pressed="true">Grid on</button><button id="toggle-plan" type="button" aria-pressed="true">Hide 2D</button></div></div>
+          <div id="scene-axes" role="group" aria-label="Scene view axes"><button type="button" data-camera="right" title="Right view" aria-label="X axis: right view" aria-pressed="false">X</button><button type="button" data-camera="top" title="Top view" aria-label="Y axis: top view" aria-pressed="false">Y</button><button type="button" data-camera="front" title="Front view" aria-label="Z axis: front view" aria-pressed="false">Z</button></div>
+          <section id="plan-panel" class="view-overlay plan-panel" aria-label="2D level footprint"><h3 class="work-kicker">2D plan</h3><div id="plan-grid"></div><p id="plan-position" class="work-kicker"></p></section><section id="script-panel" class="view-overlay script-panel" aria-label="Project JSON" hidden><div><h3 class="work-kicker accent">Project JSON</h3><button type="button" id="close-script" aria-label="Close Project JSON">×</button></div><pre id="project-code" tabindex="0"></pre></section><p id="view-error" class="view-error" hidden></p><div id="native-workbench" class="native-frame" aria-label="Game playtest" hidden></div>
+        </div>
+        <div class="play-hud" id="play-hud" hidden><div><span class="work-kicker">Playtest</span><p id="play-status" role="status"></p><p id="play-objective"></p></div><div class="play-directions" id="play-directions" aria-label="Move controls"></div></div>
+        <nav class="work-mobile-tabs" id="work-mobile-tabs" aria-label="Workbench panels"><button type="button" data-panel="scene">Scene</button><button type="button" data-panel="properties">Properties</button><button type="button" data-panel="assets">Cubibox</button><button type="button" data-panel="assistant" aria-pressed="true">CubiAI</button></nav>
+        <section id="assistant-panel" class="work-assistant">
+          <div class="assistant-heading"><h2>CubiAI</h2><span class="work-kicker">Project assistant</span><button type="button" id="mobile-undo" class="mobile-undo" hidden>Undo</button></div>
+          <form id="edit-form">
+            <button type="button" id="context-chip" title="Click to clear the selection" hidden></button>
+            <div class="edit-composer"><label class="sr-only" for="edit-prompt">Describe a change</label><textarea id="edit-prompt" rows="2" maxlength="2000" placeholder="Describe a change to this project..." required></textarea><div><span>Assets, rules, UI or physics</span><button type="submit" class="studio-primary" id="preview-change">Preview change</button></div></div>
+          </form>
+          <section class="review-card" id="review-card" hidden aria-labelledby="review-title"><h3 id="review-title">Review proposed change</h3><p id="review-summary"></p><div id="review-materials" class="review-materials" hidden></div><ul id="review-diff"></ul><p class="review-note">Preview in the viewport. Apply to save it to the draft.</p><div class="review-actions"><button id="discard-change" type="button">Discard</button><button type="button" class="studio-primary" id="apply-change">Apply change</button></div></section>
+          <p id="edit-feedback" class="studio-feedback" role="status"></p>
+        </section>
+      </section>
+      <aside class="work-properties" id="properties-panel">
+        <section id="binary-module-panel" hidden aria-labelledby="binary-module-heading">
+          <h2 id="binary-module-heading">Scene</h2>
+          <form><div class="binary-module-fields"></div><p class="studio-feedback" role="status"></p><button class="studio-primary" type="submit">Preview change</button></form>
+        </section>
+        <div class="legacy-inspector">
+          <h2>Properties</h2><p class="work-kicker accent">Selected object</p><h3 id="property-name"></h3><p id="property-kind" class="work-kicker"></p><button type="button" id="edit-selection">Edit with CubiAI</button><div class="property-section"><h3>Transform</h3><div id="property-position" class="property-position"></div><p id="property-transform"></p></div><div class="property-section"><h3>Appearance</h3><div id="property-appearance" class="property-appearance"></div></div><div class="property-section" id="physics-section" tabindex="-1"><h3>Physics</h3><dl class="property-pairs" id="property-physics"><div><dt>Movement</dt><dd>Grid based</dd></div><div><dt>Collision</dt><dd>Occupied cells</dd></div><div><dt>Gravity</dt><dd>Off</dd></div></dl></div><div class="property-section"><h3>Game logic</h3><p id="property-objective"></p><p id="property-design"></p><button type="button" data-edit="rules">Edit rules</button></div><section id="native-settings" class="property-section" hidden><h3>Board settings</h3><form id="native-settings-form"><div id="native-settings-fields" class="native-fields"></div><button type="submit">Preview settings</button></form></section>
+        </div>
+        <div class="property-section"><h3>Gameplay checks</h3><ul id="verification"></ul></div>
+      </aside>
+    </div>
+    <footer class="work-footer"><span>Local draft</span><span id="footer-coordinates"></span><span id="footer-version"></span><span class="accent">Grid snap on</span></footer>
+  </main>
+
+  <footer class="platform-wrap platform-footer" id="platform-footer"><a class="studio-brand" href="#page/home" data-route="home"><img src="./brand/cubiverse-wordmark-light.svg" alt="Cubiverse" width="140"></a><nav aria-label="Footer"><a href="./index.html#about">About</a><a href="./index.html#teams">Teams</a><a href="./index.html#home">Original Cubiverse</a><a href="mailto:Lightcone.play@gmail.com">Contact</a></nav><small>© 2026 Cubiverse</small></footer>
+
+  <dialog id="tripo-settings" aria-labelledby="tripo-settings-title" aria-describedby="tripo-settings-description">
+    <header class="tripo-head">
+      <div><h2 id="tripo-settings-title">Tripo API key</h2><p id="tripo-settings-description">Connect Tripo to generate 3D assets in the Workbench.</p></div>
+      <button type="button" class="tripo-close" aria-label="Close Tripo settings">×</button>
+    </header>
+    <form id="tripo-key-form" method="dialog" autocomplete="off">
+      <label for="tripo-region">API account site</label>
+      <select id="tripo-region" disabled><option value="ov">Global · developers.tripo3d.ai</option><option value="cn">Mainland China · developers.tripo3d.com</option></select>
+      <label for="tripo-key">Developer API key</label>
+      <input id="tripo-key" type="password" placeholder="Paste your API key" autocomplete="off" autocapitalize="none" spellcheck="false" maxlength="1024" disabled>
+      <p class="tripo-storage" data-tripo-storage></p>
+      <div class="tripo-actions">
+        <button type="submit" class="tripo-save" disabled>Save key</button>
+        <button type="button" class="tripo-verify" disabled>Check balance</button>
+      </div>
+    </form>
+    <p class="tripo-notice" role="status" aria-live="polite" data-tripo-notice></p>
+    <button type="button" class="tripo-library" hidden>Open Asset Library →</button>
+  </dialog>
+  <dialog id="studio-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-heading"><h2 id="dialog-title"></h2><button type="button" id="close-dialog" aria-label="Close">×</button></div>
+    <section id="sources-dialog" hidden><div class="source-picker-tools"><div id="source-picker-filters" role="group" aria-label="Filter source games"></div><label><span class="sr-only">Search source games</span><input id="source-picker-search" type="search" placeholder="Search source games" autocomplete="off"></label></div><p id="source-picker-count" class="studio-feedback" role="status"></p><div id="source-picker-grid" class="source-picker-grid"></div><button id="source-picker-reset" type="button" hidden>Clear filters</button></section>
+    <section id="projects-dialog" hidden><div id="composer-projects" class="composer-projects"></div></section>
+    <section id="import-dialog" hidden>
+      <div id="original-source-import"><label class="file-control">Attach a game source folder<input type="file" id="creation-folder" webkitdirectory multiple></label><p class="library-intro">Attach an unpacked project with up to 160 files and 4 MiB. Selected code excerpts go to the agent when you start the brief.</p><details><summary>Classic source review</summary><label class="file-control"><span id="original-source-label">Review an original project folder</span><input type="file" id="original-source-folder" webkitdirectory multiple></label></details></div>
+      <label class="file-control"><span id="import-file-label">Import source or project JSON</span><input type="file" id="import-file" accept=".json,application/json"></label>
+      <form id="import-source"><label>Source name<input id="import-title" required maxlength="80"></label><label>Reference link (optional)<input id="import-url" type="url" placeholder="https://" maxlength="500"></label><label>Rules and controls<textarea id="import-rules" required rows="4" maxlength="6000" placeholder="Describe legal moves, the objective and how the original game ends."></textarea></label><button class="studio-primary" type="submit">Use source</button></form>
+    </section>
+    <section id="template-dialog" hidden><button type="button" data-template="Create a turn-based 3D route puzzle with multiple elevations, a collectible and a locked path.">Route puzzle brief</button><button type="button" data-template="Create a 3D cargo puzzle with ramps and goal pads. Pushing crates into the wrong corner should block progress.">Cargo puzzle brief</button></section>
+    <section id="publish-dialog" hidden><p class="library-intro">Add this game to Community in this browser.</p><div class="publish-preview"><div id="publish-cover" class="publish-cover" aria-hidden="true"></div><div><p class="work-kicker accent">Project preview</p><h3 id="publish-title"></h3><p id="publish-objective"></p></div></div><div class="publish-actions"><button type="button" id="cancel-publish">Cancel</button><button type="button" class="studio-primary" id="publish-game">→ Publish game</button></div></section>
+    <section id="tool-dialog" hidden><form id="tool-form" class="tool-form"><p id="tool-description" class="library-intro"></p><div id="tool-fields"></div><button type="submit" class="studio-primary">Preview change</button></form></section>
+    <section id="connections-dialog" hidden><p id="connection-status" class="library-intro"></p></section>
+    <p id="import-feedback" class="studio-feedback" role="status"></p>
+  </dialog>
+</body>
+</html>

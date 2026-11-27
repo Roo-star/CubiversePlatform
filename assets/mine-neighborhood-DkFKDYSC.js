@@ -1,0 +1,1 @@
+const r=Object.freeze({touching:"26 touching cells",faces:"6 face-sharing cells",plane:"8 cells on the same horizontal layer"});function c(e,a,t,s="touching"){const n=Math.abs(e)+Math.abs(a)+Math.abs(t);return n===0||Math.max(Math.abs(e),Math.abs(a),Math.abs(t))>1?!1:s==="faces"?n===1:s==="plane"?a===0:!0}export{r as a,c as m};
